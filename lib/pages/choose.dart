@@ -45,7 +45,7 @@ class _ChoosePageState extends State<ChoosePage> {
         ],
         backgroundColor: AppConstant.bgColor1,
         elevation: 0.0,
-        toolbarHeight: 100.0,
+        toolbarHeight: 80.0,
         centerTitle: true,
         title: Text(
           "Choose a character",
@@ -59,8 +59,9 @@ class _ChoosePageState extends State<ChoosePage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: GridView.builder(
+          padding: EdgeInsets.zero,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, childAspectRatio: 1.5),
+              crossAxisCount: 2, childAspectRatio: 1.3),
           itemCount: chooseList.length,
           itemBuilder: (context, index) {
             ChooseModel item = chooseList[index];
