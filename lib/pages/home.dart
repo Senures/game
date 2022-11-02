@@ -3,6 +3,7 @@ import 'package:game_provider/core/init/hive_manager.dart';
 import 'package:game_provider/core/model/choose_model.dart';
 import 'package:game_provider/core/model/home_model.dart';
 import 'package:game_provider/pages/choose.dart';
+import 'package:game_provider/pages/detail.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -115,36 +116,47 @@ class _HomePageState extends State<HomePage> {
                 itemCount: homeList.length,
                 itemBuilder: (context, index) {
                   HomeModel item = homeList[index];
-                  return Container(
-                    padding: const EdgeInsets.all(10.0),
-                    alignment: index == 1
-                        ? Alignment.centerRight
-                        : Alignment.centerLeft,
-                    margin: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 20.0),
-                    height: 85.0,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Color(model.color),
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 1.0,
-                              spreadRadius: 1.0,
-                              offset: Offset(2.0, 1.0),
-                              color: Colors.white24)
-                        ]),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push<void>(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (BuildContext context) =>
+                              DetailPage(model: item, chooseModel: model),
+                        ),
+                      );
+                    },
                     child: Container(
-                      width: 170.0,
-                      //color: Colors.amber,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Image.asset(
-                            item.icon,
-                            width: 80.0,
-                          ),
-                          Text(item.title)
-                        ],
+                      padding: const EdgeInsets.all(10.0),
+                      alignment: index == 1
+                          ? Alignment.centerRight
+                          : Alignment.centerLeft,
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      height: 85.0,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: Color(model.color),
+                          boxShadow: const [
+                            BoxShadow(
+                                blurRadius: 1.0,
+                                spreadRadius: 1.0,
+                                offset: Offset(2.0, 1.0),
+                                color: Colors.white38)
+                          ]),
+                      child: Container(
+                        width: 170.0,
+                        //color: Colors.amber,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Image.asset(
+                              item.icon,
+                              width: 80.0,
+                            ),
+                            Text(item.title)
+                          ],
+                        ),
                       ),
                     ),
                   );
