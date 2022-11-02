@@ -5,7 +5,7 @@ class HomeModel {
 }
 
 List<HomeModel> homeList = [
-  HomeModel(icon: "assets/mat.png", title: "Math Puzzle"),
-  HomeModel(icon: "assets/br.png", title: "Math Puzzle"),
-  HomeModel(icon: "assets/brain.png", title: "Math Puzzle"),
+  HomeModel(icon: "assets/maths.png", title: "Math Puzzle"),
+  HomeModel(icon: "assets/memo.png", title: "Memory Puzzle"),
+  HomeModel(icon: "assets/bü.png", title: "Train Your Brain"),
 ];

@@ -13,7 +13,7 @@ class _GamePageState extends State<GamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.black,
         elevation: 0.0,
         centerTitle: true,
         title: Row(
