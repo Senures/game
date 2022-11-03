@@ -141,8 +141,8 @@ class _DetailPageState extends State<DetailPage> {
                                 Navigator.push<void>(
                                   context,
                                   MaterialPageRoute<void>(
-                                    builder: (BuildContext context) =>
-                                        const GamePage(),
+                                    builder: (BuildContext context) => GamePage(
+                                        chooseModel: widget.chooseModel),
                                   ),
                                 );
                               },
