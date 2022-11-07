@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_provider/core/app_constant.dart';
+
 import 'package:game_provider/core/init/hive_manager.dart';
 import 'package:game_provider/core/model/choose_model.dart';
 import 'package:game_provider/pages/home.dart';
@@ -26,7 +26,7 @@ class _ChoosePageState extends State<ChoosePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConstant.bgColor1,
+      //backgroundColor: AppConstant.bgColor1,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -43,14 +43,14 @@ class _ChoosePageState extends State<ChoosePage> {
               },
               icon: const Icon(Icons.add))
         ],
-        backgroundColor: AppConstant.bgColor1,
+        // backgroundColor: AppConstant.bgColor1,
         elevation: 0.0,
         toolbarHeight: 80.0,
         centerTitle: true,
         title: Text(
           "Choose a character",
           style: TextStyle(
-              color: AppConstant.textColor,
+              //color: AppConstant.textColor,
               fontSize: 25.0,
               letterSpacing: .3,
               fontWeight: FontWeight.w400),

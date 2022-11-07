@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:game_provider/core/app_constant.dart';
 import 'package:game_provider/core/model/choose_model.dart';
 
 class GamePage extends StatefulWidget {
